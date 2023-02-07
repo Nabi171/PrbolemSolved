@@ -35,3 +35,26 @@ let characters = "Batch7";
 // evenOdd(characters);
 
 
+
+// problem3
+
+function isLGSeven(num) {
+    if (num < 7) {
+        let result = num - 7;
+        return result;
+    }
+    else if (num > 7) {
+        let result = num * 2;
+        return result;
+    }
+    else if (num == 7) {
+        let result = 'Please give a number which is greaterthan 7 or lessthan 7';
+        return result;
+    }
+
+}
+
+// let answertwo = isLGSeven(6);
+// let answertwo = isLGSeven(-15);
+let answertwo = isLGSeven(15);
+console.log(answertwo);

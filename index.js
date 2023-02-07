@@ -23,10 +23,10 @@ let answer = mindGame(33);
 function evenOdd(characters) {
     let charactersNumber = characters.length;
     if (charactersNumber % 2 == 1) {
-        console.log('This character is odd');
+        console.log('odd');
     }
     else if (charactersNumber % 2 == 0) {
-        console.log('This character is even');
+        console.log('even');
     }
 }
 // let characters = "phero";
@@ -62,24 +62,55 @@ let answertwo = isLGSeven(15);
 
 // problem4
 function findingBadData(numbers) {
-    for (let i = 0; i < numbers.length; i++) {
-        let number = numbers[i];
-        if (number < 0) {
-            console.log(number);
+
+
+
+
+
+    if (numbers.length == 4) {
+        for (let i = 0; i < numbers.length; i++) {
+            let number = numbers[i];
+            let sum = 0;
+            while (numbers[i] < 0) {
+
+                let total = sum + numbers.length - 1;
+                ++sum;
+                return total;
+                break;
+            }
+
+
         }
-        else if (number > 0) {
-            let result = 0;
-            console.log(result);
+    }
+    else if (numbers.length == 5) {
+        for (let i = 0; i < numbers.length; i++) {
+            let number = numbers[i];
+            let sum = 0;
+            while (numbers[i] < 0) {
+
+                let total = sum + numbers.length;
+                ++sum;
+                return total;
+                break;
+            }
+
+
         }
+    }
+
+    else {
+        return 0;
     }
 
 }
 
+// please uncomment anyone for checking
 // let numbers = [1, 2, 5];
-let numbers = [2, -5, -7, -13];
 // let numbers = [2, -5, -7, -13];
+let numbers = [-4, -9, -33, -13, -55];
 let answer4 = findingBadData(numbers);
-// console.log(answer4);
+// console.log(answer4)
+
 
 
 
